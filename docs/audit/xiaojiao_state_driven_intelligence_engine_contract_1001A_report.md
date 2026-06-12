@@ -57,3 +57,19 @@ Preference learning is candidate-only and readonly in this stage. No real memory
 ## Boundary Evidence
 
 No real UI implementation, real frontend modification, runtime connection, provider/model call, database write, memory write, Feishu write, formal export, classroom student runtime, old sealed-stage modification, blind rename, 1000F entry, or 1001B entry was performed.
+
+## GitHub Review
+
+Review repo:
+
+```text
+https://github.com/ROLLcatCLUB/xiaojiao-1001a-state-driven-intelligence-engine-contract-review
+```
+
+Raw base:
+
+```text
+https://raw.githubusercontent.com/ROLLcatCLUB/xiaojiao-1001a-state-driven-intelligence-engine-contract-review/main
+```
+
+The review repo contains only review artifacts and source anchors, not the full `xiaobei-core` repository. Raw links and a fresh remote source ZIP validation passed.

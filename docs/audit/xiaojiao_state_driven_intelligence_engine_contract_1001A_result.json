@@ -8,6 +8,14 @@
   "validator_no_arg_pass": true,
   "validator_root_pass": true,
   "manifest_zip_alignment_pass": true,
+  "github_review": {
+    "repo": "https://github.com/ROLLcatCLUB/xiaojiao-1001a-state-driven-intelligence-engine-contract-review",
+    "branch": "main",
+    "raw_base": "https://raw.githubusercontent.com/ROLLcatCLUB/xiaojiao-1001a-state-driven-intelligence-engine-contract-review/main",
+    "contains_full_xiaobei_core_repo": false,
+    "raw_links_verified": true,
+    "fresh_remote_zip_validation_pass": true
+  },
   "modules": [
     "intent_parser",
     "work_state_manager",

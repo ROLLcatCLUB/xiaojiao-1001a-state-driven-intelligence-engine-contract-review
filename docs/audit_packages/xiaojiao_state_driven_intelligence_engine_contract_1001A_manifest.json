@@ -77,13 +77,13 @@
                     },
                     {
                         "path":  "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_report.md",
-                        "size":  1877,
-                        "sha256":  "AC738928C0E487443097718325AA89ECDE32E4FA7D30EE1AA3CF7E811FDF29F9"
+                        "size":  2323,
+                        "sha256":  "A99EAD7D76A22F93D6453FEBAFD6C551AAD008CD7FDD2413E6AFACB85001B7CF"
                     },
                     {
                         "path":  "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_result.json",
-                        "size":  1955,
-                        "sha256":  "61092E662CEEB98C35810D9A58147F6EB7204DAD6BFC38F2E9F4B976A658BF79"
+                        "size":  2370,
+                        "sha256":  "7EC67A01AEE9448FC5FC9978442FE2E8D352B5CA0424B2965D07FF2D086E5511"
                     },
                     {
                         "path":  "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_checklist.json",
