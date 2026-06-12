@@ -1,0 +1,133 @@
+{
+    "package_name":  "xiaojiao_state_driven_intelligence_engine_contract_1001A",
+    "package_code":  "1001_XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_PACKAGE",
+    "stage_code":  "1001A_XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT",
+    "final_status":  "XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT_PASS",
+    "generated_at":  "2026-06-12T23:59:00+08:00",
+    "zip_path":  "docs/audit_packages/xiaojiao_state_driven_intelligence_engine_contract_1001A.zip",
+    "zip_sha256":  "EXTERNAL_RECOMPUTATION_REQUIRED",
+    "zip_entry_count":  14,
+    "manifest_minus_zip":  [
+
+                           ],
+    "zip_minus_manifest":  [
+
+                           ],
+    "zip_entries":  [
+                        "docs/handoff/xiaojiao_dynamic_work_surface_e5_r1_to_new_product_shape_line_handoff_20260612.md",
+                        "docs/handoff/xiaojiao_teacher_jarvis_workbench_1000A_execution_handoff_20260612.md",
+                        "docs/handoff/teacher_jarvis_workbench_planning_notes_1000_20260612.md",
+                        "docs/foundation/xiaojiao_agent_action_policy_and_work_state_contract_1000D.md",
+                        "docs/foundation/xiaojiao_agent_action_policy_and_work_state_contract_1000D.json",
+                        "docs/foundation/xiaojiao_dynamic_work_surface_end_to_end_mock_1000E5_R1.md",
+                        "docs/foundation/xiaojiao_dynamic_work_surface_end_to_end_mock_1000E5_R1.json",
+                        "docs/foundation/xiaojiao_state_driven_intelligence_engine_contract_1001A.md",
+                        "docs/foundation/xiaojiao_state_driven_intelligence_engine_contract_1001A.json",
+                        "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_report.md",
+                        "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_result.json",
+                        "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_checklist.json",
+                        "docs/audit_packages/xiaojiao_state_driven_intelligence_engine_contract_1001A_manifest.json",
+                        "scripts/validate_xiaojiao_state_driven_intelligence_engine_contract_1001A.py"
+                    ],
+    "entries":  [
+                    {
+                        "path":  "docs/handoff/xiaojiao_dynamic_work_surface_e5_r1_to_new_product_shape_line_handoff_20260612.md",
+                        "size":  13530,
+                        "sha256":  "E4FF6A396E0F9F0B8EE318BF7B5ED997DC7F8EDB24FDA76DA522AAC9336F58D3"
+                    },
+                    {
+                        "path":  "docs/handoff/xiaojiao_teacher_jarvis_workbench_1000A_execution_handoff_20260612.md",
+                        "size":  16178,
+                        "sha256":  "F0B8682AF016133893F2DAB48954F41D55AE1E1C0FB2F968FCE914C0DAF5762B"
+                    },
+                    {
+                        "path":  "docs/handoff/teacher_jarvis_workbench_planning_notes_1000_20260612.md",
+                        "size":  17399,
+                        "sha256":  "AA840EE77C4818C56E3AEC72DA322981255212B9C8B110C93AE4041994F8468F"
+                    },
+                    {
+                        "path":  "docs/foundation/xiaojiao_agent_action_policy_and_work_state_contract_1000D.md",
+                        "size":  6266,
+                        "sha256":  "0AC82A426346BF28839F3AAF66F688B29971DDA69CC95FE03CE295DD885C30D0"
+                    },
+                    {
+                        "path":  "docs/foundation/xiaojiao_agent_action_policy_and_work_state_contract_1000D.json",
+                        "size":  6539,
+                        "sha256":  "23CFD035C068F6D62B7CF2396718A0B893523C26A8D056D314C9491895E46CB8"
+                    },
+                    {
+                        "path":  "docs/foundation/xiaojiao_dynamic_work_surface_end_to_end_mock_1000E5_R1.md",
+                        "size":  595,
+                        "sha256":  "13CDDF20A4E0E3DA0C629ACCBDB8817BA0112C0009DFD2E6767DB2540AC467FB"
+                    },
+                    {
+                        "path":  "docs/foundation/xiaojiao_dynamic_work_surface_end_to_end_mock_1000E5_R1.json",
+                        "size":  1858,
+                        "sha256":  "E2C53E7CA52E52FB78D7F4E464320270BF92591085769BB3FB44CCC8BE6E94A7"
+                    },
+                    {
+                        "path":  "docs/foundation/xiaojiao_state_driven_intelligence_engine_contract_1001A.md",
+                        "size":  10846,
+                        "sha256":  "52DE648DAE551B2F094D8ABA5AB7C62C4F54DD4B4D16C1F7A9CA13561FEDE603"
+                    },
+                    {
+                        "path":  "docs/foundation/xiaojiao_state_driven_intelligence_engine_contract_1001A.json",
+                        "size":  10457,
+                        "sha256":  "69ACF908B8EB69E78BD81C2A426B07A4A2365DFFE8EC2E1F1308519B697A7E6E"
+                    },
+                    {
+                        "path":  "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_report.md",
+                        "size":  1877,
+                        "sha256":  "AC738928C0E487443097718325AA89ECDE32E4FA7D30EE1AA3CF7E811FDF29F9"
+                    },
+                    {
+                        "path":  "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_result.json",
+                        "size":  1955,
+                        "sha256":  "61092E662CEEB98C35810D9A58147F6EB7204DAD6BFC38F2E9F4B976A658BF79"
+                    },
+                    {
+                        "path":  "docs/audit/xiaojiao_state_driven_intelligence_engine_contract_1001A_checklist.json",
+                        "size":  3576,
+                        "sha256":  "1D90B03A01016AC292B8D124BE706562DBF0EA398786DEB0E75249250430279A"
+                    },
+                    {
+                        "path":  "docs/audit_packages/xiaojiao_state_driven_intelligence_engine_contract_1001A_manifest.json",
+                        "size":  null,
+                        "sha256":  "SELF_REFERENTIAL",
+                        "sha256_policy":  "manifest self hash is intentionally not materialized because the manifest contains its own metadata"
+                    },
+                    {
+                        "path":  "scripts/validate_xiaojiao_state_driven_intelligence_engine_contract_1001A.py",
+                        "size":  10356,
+                        "sha256":  "914325842F91268ECBED4791C2379C7EBB773B47A49935B41D4A5D279E341099"
+                    }
+                ],
+    "boundary":  {
+                     "runtime_change_allowed":  false,
+                     "ui_implementation_allowed":  false,
+                     "real_frontend_modification_allowed":  false,
+                     "provider_model_call_allowed":  false,
+                     "database_write_allowed":  false,
+                     "memory_write_allowed":  false,
+                     "feishu_write_allowed":  false,
+                     "formal_export_allowed":  false,
+                     "classroom_student_runtime_allowed":  false,
+                     "enter_1000F_allowed":  false,
+                     "enter_1001B_allowed":  false,
+                     "old_sealed_stage_modification_allowed":  false,
+                     "full_repo_blind_rename_allowed":  false,
+                     "real_ui_implemented":  false,
+                     "real_frontend_modified":  false,
+                     "runtime_connected":  false,
+                     "provider_model_called":  false,
+                     "database_written":  false,
+                     "memory_written":  false,
+                     "feishu_written":  false,
+                     "formal_export_created":  false,
+                     "classroom_student_runtime_connected":  false,
+                     "old_sealed_stage_modified":  false,
+                     "full_repo_blind_rename_performed":  false,
+                     "entered_1000F":  false,
+                     "entered_1001B":  false
+                 }
+}

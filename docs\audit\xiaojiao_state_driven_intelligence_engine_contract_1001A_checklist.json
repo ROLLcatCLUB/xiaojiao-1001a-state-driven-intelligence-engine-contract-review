@@ -1,0 +1,156 @@
+{
+  "stage_code": "1001A_XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT",
+  "final_status_target": "XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT_PASS",
+  "items": [
+    {
+      "id": "stage_identity",
+      "label": "stage identity",
+      "pass": true
+    },
+    {
+      "id": "explicit_authorization_boundary",
+      "label": "explicit authorization boundary",
+      "pass": true
+    },
+    {
+      "id": "source_handoffs",
+      "label": "source handoffs and prior contracts",
+      "pass": true
+    },
+    {
+      "id": "work_state_backend_core_asset",
+      "label": "Work State is backend core asset",
+      "pass": true
+    },
+    {
+      "id": "frontend_projection_only",
+      "label": "frontend is projection only",
+      "pass": true
+    },
+    {
+      "id": "three_layer_intelligence_model",
+      "label": "deterministic logic, rule engine, LLM model",
+      "pass": true
+    },
+    {
+      "id": "intent_parser",
+      "label": "Intent Parser defined",
+      "pass": true
+    },
+    {
+      "id": "work_state_manager",
+      "label": "Work State Manager defined",
+      "pass": true
+    },
+    {
+      "id": "work_view_composer",
+      "label": "Work View Composer defined",
+      "pass": true
+    },
+    {
+      "id": "suggestion_engine",
+      "label": "Suggestion Engine defined",
+      "pass": true
+    },
+    {
+      "id": "generation_pipeline",
+      "label": "Generation Pipeline defined",
+      "pass": true
+    },
+    {
+      "id": "preference_learner",
+      "label": "Preference Learner defined",
+      "pass": true
+    },
+    {
+      "id": "observation_metrics",
+      "label": "Observation Metrics defined",
+      "pass": true
+    },
+    {
+      "id": "llm_direct_frontend_control_forbidden",
+      "label": "LLM direct frontend control forbidden",
+      "pass": true
+    },
+    {
+      "id": "context_trimming_required",
+      "label": "context trimming required",
+      "pass": true
+    },
+    {
+      "id": "full_chat_history_forbidden",
+      "label": "full chat history context forbidden",
+      "pass": true
+    },
+    {
+      "id": "full_work_state_prompt_forbidden",
+      "label": "full Work State prompt forbidden",
+      "pass": true
+    },
+    {
+      "id": "preference_candidate_only",
+      "label": "preference learning candidate-only and readonly",
+      "pass": true
+    },
+    {
+      "id": "cost_control_contract",
+      "label": "cost control contract",
+      "pass": true
+    },
+    {
+      "id": "no_runtime_change",
+      "label": "no runtime change",
+      "pass": true
+    },
+    {
+      "id": "no_ui_implementation",
+      "label": "no UI implementation",
+      "pass": true
+    },
+    {
+      "id": "no_real_frontend_modification",
+      "label": "no real frontend modification",
+      "pass": true
+    },
+    {
+      "id": "no_provider_model_call",
+      "label": "no provider/model call",
+      "pass": true
+    },
+    {
+      "id": "no_database_write",
+      "label": "no database write",
+      "pass": true
+    },
+    {
+      "id": "no_memory_write",
+      "label": "no memory write",
+      "pass": true
+    },
+    {
+      "id": "no_feishu_write",
+      "label": "no Feishu write",
+      "pass": true
+    },
+    {
+      "id": "no_formal_export",
+      "label": "no formal export",
+      "pass": true
+    },
+    {
+      "id": "no_1000F",
+      "label": "1000F deferred",
+      "pass": true
+    },
+    {
+      "id": "no_1001B",
+      "label": "1001B not entered",
+      "pass": true
+    },
+    {
+      "id": "manifest_zip_alignment",
+      "label": "manifest and ZIP alignment",
+      "pass": true
+    }
+  ]
+}

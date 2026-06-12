@@ -1,0 +1,45 @@
+{
+  "package_code": "1000_XIAOJIAO_TEACHER_JARVIS_WORKBENCH_PLANNING_PACKAGE",
+  "stage_code": "1000E5_R1_DYNAMIC_WORK_SURFACE_END_TO_END_MOCK",
+  "stage_name": "Dynamic Work Surface End To End Mock",
+  "stage_type": "dynamic_work_surface_static_product_mock_only",
+  "final_status_target": "XIAOJIAO_DYNAMIC_WORK_SURFACE_END_TO_END_MOCK_PASS",
+  "source_files": [
+    "docs/audit_packages/xiaojiao_work_state_to_dynamic_panel_rendering_1000E2_manifest.json",
+    "docs/audit_packages/xiaojiao_assistant_surface_compact_ui_1000E3_manifest.json",
+    "docs/audit_packages/xiaojiao_work_action_stub_pipeline_1000E4_manifest.json",
+    "docs/audit_packages/xiaojiao_art_teacher_pre_class_workbench_end_to_end_dry_run_1000E5_manifest.json"
+  ],
+  "purpose": "Turn the E5 fixture dry-run into a product-shape Dynamic Work Surface mock without entering 1001.",
+  "principles": [
+    "state_is_the_product",
+    "teacher_sees_work_state_projection",
+    "work_state_to_composer_to_surface_to_blocks",
+    "work_output_primary_conversation_temporary",
+    "one_main_focus_object",
+    "supporting_objects_retreat_or_hide",
+    "xiaojiao_hints_attach_to_work_object",
+    "work_records_are_state_changes_not_chat_history"
+  ],
+  "states": [
+    "initialized_surface",
+    "plan_focus_surface",
+    "today_focus_surface"
+  ],
+  "boundary_flags_required": {
+    "real_ui_implemented": false,
+    "real_frontend_modified": false,
+    "runtime_connected": false,
+    "provider_called": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "classroom_student_runtime_connected": false,
+    "old_sealed_stage_modified": false,
+    "full_repo_blind_rename_performed": false,
+    "entered_1001": false,
+    "entered_1000F": false
+  },
+  "next_stage": "1000E5_R1_REVIEW_PENDING_BEFORE_1001"
+}

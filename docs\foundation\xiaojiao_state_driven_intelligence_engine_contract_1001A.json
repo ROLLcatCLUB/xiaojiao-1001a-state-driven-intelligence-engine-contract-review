@@ -1,0 +1,322 @@
+{
+  "package_code": "1001_XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_PACKAGE",
+  "stage_code": "1001A_XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT",
+  "stage_name": "Xiaojiao State Driven Intelligence Engine Contract",
+  "stage_type": "intelligence_engine_contract_only",
+  "final_status_target": "XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT_PASS",
+  "date": "2026-06-12",
+  "authorization_boundary": {
+    "explicit_user_authorized_stage": "1001A_XIAOJIAO_STATE_DRIVEN_INTELLIGENCE_ENGINE_CONTRACT",
+    "authorization_limited_to_contract_only": true,
+    "previous_e5_r1_no_1001_rule_acknowledged": true,
+    "enter_1001B_allowed": false,
+    "enter_1000F_allowed": false
+  },
+  "source_files": [
+    "docs/handoff/xiaojiao_dynamic_work_surface_e5_r1_to_new_product_shape_line_handoff_20260612.md",
+    "docs/handoff/xiaojiao_teacher_jarvis_workbench_1000A_execution_handoff_20260612.md",
+    "docs/handoff/teacher_jarvis_workbench_planning_notes_1000_20260612.md",
+    "docs/foundation/xiaojiao_agent_action_policy_and_work_state_contract_1000D.md",
+    "docs/foundation/xiaojiao_dynamic_work_surface_end_to_end_mock_1000E5_R1.md"
+  ],
+  "core_principles": {
+    "work_state_is_backend_core_asset": true,
+    "work_state_is_not_frontend_ui_state": true,
+    "frontend_is_projection_only": true,
+    "llm_direct_frontend_control_allowed": false,
+    "teacher_facing_jarvis_allowed": false,
+    "teacher_facing_internal_state_terms_allowed": false
+  },
+  "state_projection_pipeline": [
+    "Work State",
+    "Work View Composer",
+    "Dynamic Work Surface",
+    "Render Blocks"
+  ],
+  "three_layer_intelligence_model": [
+    {
+      "layer": "deterministic_logic",
+      "purpose": [
+        "click_confirmation",
+        "state_transition",
+        "time_refresh",
+        "mark_complete"
+      ],
+      "token_cost": "0"
+    },
+    {
+      "layer": "rule_engine",
+      "purpose": [
+        "priority",
+        "suggestion_trigger",
+        "view_composition",
+        "gap_reasoning",
+        "reminder_timing"
+      ],
+      "token_cost": "0_or_extremely_low"
+    },
+    {
+      "layer": "llm",
+      "purpose": [
+        "content_generation",
+        "complex_revision",
+        "open_question_answering",
+        "preference_summarization"
+      ],
+      "token_cost": "paid_model_cost"
+    }
+  ],
+  "modules": [
+    {
+      "id": "intent_parser",
+      "name": "Intent Parser",
+      "input_sources": [
+        "teacher_text",
+        "teacher_click",
+        "time_trigger",
+        "work_object_event"
+      ],
+      "output": "structured_intent",
+      "parsing_order": [
+        "rule_matching",
+        "lightweight_semantic_classification_or_embedding",
+        "llm_escalation_only_when_low_confidence_or_open_ended"
+      ],
+      "required_intents": [
+        "view_today",
+        "view_week",
+        "generate_plan",
+        "prepare_lesson",
+        "confirm_current",
+        "revise_section",
+        "generate_handout",
+        "inspect_gap",
+        "ask_open_question",
+        "save_preference_candidate"
+      ]
+    },
+    {
+      "id": "work_state_manager",
+      "name": "Work State Manager",
+      "backend_core_asset": true,
+      "owned_state_fields": [
+        "teacher_profile",
+        "temporal_state",
+        "focus_state",
+        "work_objects",
+        "gaps",
+        "pending_suggestions",
+        "preference_profile",
+        "work_log",
+        "audit_trace"
+      ],
+      "reasoning_examples": [
+        "teaching_work_plan.confirmed -> weekly_work_graph.available",
+        "lesson_draft.pending_confirmation -> today_work_items.highlight_current_lesson",
+        "textbook_catalog.missing -> draft_generation.allowed_with_progress_review_flag",
+        "teacher_prefers_shorter_activities -> revision_suggestion.default_to_compact_rhythm"
+      ],
+      "raw_internal_state_label_exposure_allowed": false
+    },
+    {
+      "id": "work_view_composer",
+      "name": "Work View Composer",
+      "llm_call_allowed": false,
+      "responsibilities": [
+        "choose_primary_work_object",
+        "choose_visible_supporting_objects",
+        "hide_irrelevant_internal_state",
+        "attach_xiaojiao_hints_to_relevant_work_objects",
+        "prevent_chat_history_from_becoming_primary_workspace"
+      ],
+      "output_shape": {
+        "layout": "today_sequence",
+        "primary": "today_work_items",
+        "supporting": [
+          "week_strip"
+        ],
+        "hidden": [
+          "semester_plan"
+        ],
+        "agent_notes": [
+          {
+            "attach_to": "lesson_L003",
+            "source": "structured_suggestion",
+            "actions": [
+              "现在查看草稿",
+              "稍后处理"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "suggestion_engine",
+      "name": "Suggestion Engine",
+      "default_mode": "structured_suggestion",
+      "structured_formula": "template + data + correct_timing + correct_attachment_point",
+      "llm_suggestion_allowed_only_when": [
+        "content_understanding_required",
+        "complex_judgment_required",
+        "language_synthesis_beyond_template_required"
+      ],
+      "most_suggestions_zero_token": true
+    },
+    {
+      "id": "generation_pipeline",
+      "name": "Generation Pipeline",
+      "llm_allowed_for": [
+        "generate_teaching_work_plan_content",
+        "generate_lesson_design",
+        "generate_handout",
+        "generate_evaluation_rubric",
+        "revise_complex_content",
+        "answer_open_ended_professional_question",
+        "summarize_preference_candidates"
+      ],
+      "context_trimming_required": true,
+      "full_work_state_prompt_allowed": false,
+      "full_chat_history_context_allowed": false,
+      "structured_output_required": true,
+      "pipeline": [
+        "LLM output",
+        "structured parse",
+        "policy gate",
+        "Work State candidate update",
+        "Composer projection"
+      ]
+    },
+    {
+      "id": "preference_learner",
+      "name": "Preference Learner",
+      "stage_mode": "candidate_only_readonly",
+      "allowed_outputs": [
+        "preference_candidate",
+        "teacher_profile_candidate",
+        "readonly_preference_summary",
+        "confirmation_required_before_promotion"
+      ],
+      "real_memory_write_allowed": false,
+      "silent_preference_promotion_allowed": false,
+      "candidate_examples": [
+        "teacher_often_shortens_activity_sections",
+        "teacher_prefers_fewer_stronger_tasks",
+        "teacher_simplifies_handouts",
+        "teacher_prefers_specific_evaluation_language",
+        "teacher_keeps_certain_lesson_structure"
+      ]
+    },
+    {
+      "id": "observation_metrics",
+      "name": "Observation Metrics",
+      "required_metrics": [
+        "fallback_rate",
+        "suggestion_acceptance_rate",
+        "draft_acceptance_rate",
+        "average_revision_rounds",
+        "direct_confirmation_ratio_after_generation",
+        "teacher_dwell_longest_step",
+        "unknown_intent_top_list",
+        "ignored_suggestion_top_list",
+        "skipped_work_object_top_list",
+        "llm_call_rate_by_intent",
+        "token_cost_by_work_object"
+      ],
+      "self_improvement_policy": {
+        "allowed_wording": "The system accumulates usage signals, forms candidate improvements, and reduces manual intervention cost over time.",
+        "automatic_self_evolution_claim_allowed": false
+      }
+    }
+  ],
+  "cost_control_contract": {
+    "state_changes_token_cost": "0",
+    "view_decisions_token_cost": "0",
+    "most_reminders_token_cost": "0",
+    "simple_intent_recognition_cost": "0_or_lightweight_classifier",
+    "content_generation_llm_allowed": true,
+    "complex_professional_questions_llm_allowed": true,
+    "scenario_table": [
+      {
+        "scenario": "click_confirm_draft",
+        "handling": "deterministic_logic"
+      },
+      {
+        "scenario": "view_today_work",
+        "handling": "Work State + Composer"
+      },
+      {
+        "scenario": "monday_weekly_prompt",
+        "handling": "rule_engine"
+      },
+      {
+        "scenario": "what_should_i_do_today",
+        "handling": "rule_or_state_query"
+      },
+      {
+        "scenario": "generate_handout",
+        "handling": "LLM"
+      },
+      {
+        "scenario": "shorten_second_activity",
+        "handling": "scoped_LLM"
+      },
+      {
+        "scenario": "improve_this_lesson",
+        "handling": "LLM"
+      },
+      {
+        "scenario": "use_this_style_from_now_on",
+        "handling": "preference_candidate_confirmation_required"
+      }
+    ]
+  },
+  "hard_boundaries": {
+    "runtime_change_allowed": false,
+    "ui_implementation_allowed": false,
+    "real_frontend_modification_allowed": false,
+    "provider_model_call_allowed": false,
+    "database_write_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_write_allowed": false,
+    "formal_export_allowed": false,
+    "classroom_student_runtime_allowed": false,
+    "enter_1000F_allowed": false,
+    "enter_1001B_allowed": false,
+    "old_sealed_stage_modification_allowed": false,
+    "full_repo_blind_rename_allowed": false
+  },
+  "prohibited_patterns": [
+    "calling a real provider or model",
+    "wiring a provider candidate",
+    "writing database state",
+    "writing memory",
+    "writing Feishu",
+    "creating formal export",
+    "modifying real frontend pages",
+    "implementing production UI",
+    "connecting runtime",
+    "entering 1000F",
+    "entering 1001B without explicit approval",
+    "letting LLM directly control frontend output",
+    "sending full chat history as generation context",
+    "sending full Work State as generation context",
+    "exposing internal state terms as teacher-facing page labels",
+    "making chat history the main workspace",
+    "treating frontend UI state as the product core",
+    "silently promoting preference candidates",
+    "claiming automatic self-evolution",
+    "putting Jarvis in teacher-facing product copy"
+  ],
+  "validation_focus": [
+    "state-driven intelligence architecture",
+    "low-cost model call policy",
+    "Work State backend ownership",
+    "Composer projection boundary",
+    "LLM direct frontend control forbidden",
+    "context trimming required",
+    "preference learning candidate-only",
+    "observation metrics defined"
+  ],
+  "next_stage": "1001B_WORK_STATE_MANAGER_AND_COMPOSER_RULE_FIXTURE_PENDING_REVIEW",
+  "deferred_stage": "1000F_MODEL_CANDIDATE_AND_RESOURCE_CONTEXT_INTEGRATION"
+}
